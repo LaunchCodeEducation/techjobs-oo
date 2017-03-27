@@ -1,4 +1,6 @@
-package org.launchcode.models;
+package org.launchcode.models.forms;
+
+import org.launchcode.models.JobFieldType;
 
 /**
  * Created by LaunchCode

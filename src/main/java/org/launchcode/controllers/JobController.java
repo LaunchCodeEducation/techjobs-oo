@@ -1,7 +1,6 @@
 package org.launchcode.controllers;
 
-import org.launchcode.models.Job;
-import org.launchcode.models.JobForm;
+import org.launchcode.models.forms.JobForm;
 import org.launchcode.models.data.JobData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
