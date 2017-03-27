@@ -7,6 +7,7 @@ import org.launchcode.models.PositionType;
 import org.launchcode.models.data.JobData;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 
 /**
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 public class JobForm {
 
     @NotNull
+    @Size(min=1, message = "Name may not be empty")
     private String name;
 
     @NotNull
