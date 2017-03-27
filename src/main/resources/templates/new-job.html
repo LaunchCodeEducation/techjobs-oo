@@ -13,6 +13,7 @@
         <div class="form-group">
             <label th:for="name">Name</label>
             <input th:field="*{name}" />
+            <div th:errors="*{name}"></div>
         </div>
 
         <div class="form-group">

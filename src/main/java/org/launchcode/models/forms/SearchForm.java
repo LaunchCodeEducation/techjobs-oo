@@ -7,8 +7,13 @@ import org.launchcode.models.JobFieldType;
  */
 public class SearchForm {
 
+    // The search options
     private JobFieldType[] fields = JobFieldType.values();
+
+    // The selected search options
     private JobFieldType searchField = JobFieldType.ALL;
+
+    // The search string
     private String keyword;
 
     public JobFieldType getSearchField() {
