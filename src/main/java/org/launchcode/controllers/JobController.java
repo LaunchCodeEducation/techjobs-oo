@@ -22,6 +22,7 @@ public class JobController {
     // The detail display for a given Job at URLs like /job?id=17
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String index(Model model, int id) {
+        model.addAttribute("job-id", id);
 
         // TODO #1 - get the Job with the given ID and pass it into the view
 
