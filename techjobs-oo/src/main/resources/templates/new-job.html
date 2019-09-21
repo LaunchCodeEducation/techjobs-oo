@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+</head>
+<body>
+
+<div th:replace="fragments :: page-header"></div>
+
+<div class="container body-content">
+
+    <form th:object="${jobForm}" method="post" th:object="${job}">
+
+        <div class="form-group">
+            <label th:for="name">Name</label>
+            <input th:field="*{name}" />
+            <div th:errors="*{name}"></div>
+        </div>
+
+        <div class="form-group">
+            <label th:for="employerId">Employer</label>
+            <select th:field="*{employer-Id}">
+                <option th:each="employer : *{employers}"
+                        th:value="${employer.id}"
+                        th:text="${employer.value}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label th:for="locationId">Location</label>
+            <select th:field="*{location-Id}">
+                <option th:each="location : *{locations}"
+                        th:value="${location.id}"
+                        th:text="${location.value}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label th:for="skill-Id">Skill</label>
+            <select th:field="*{skill-Id}">                     corecompetencies
+                <option th:each="skill : *{skills}"
+                        th:value="${skill.id}"
+                        th:text="${skill.value}"></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label th:for="position-type-Id">Position Type</label>
+            <select th:field="*{position-type-Id}">
+                <option th:each="position: *{positions}"
+                        th:value="$position.id}"
+                        th:text="${position.value}"></option>
+            </select>
+        </div>
+
+
+        <!-- ****TODO #5 - Create <select> dropdowns for other job fields -->
+
+        <input type="submit" value="Add Job" />
+    </form>
+
+</div>
+
+</body>
+</html>
